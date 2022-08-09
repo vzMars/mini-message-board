@@ -1,20 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const Message = require('../models/message');
 
-const messages = [
-  {
-    text: 'Hi there!',
-    user: 'Amando',
-    added: new Date(),
-  },
-  {
-    text: 'Hello World!',
-    user: 'Charles',
-    added: new Date(),
-  },
-];
-
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+  let messages;
+  try {
+    messages = await Message.find().sort({ added: -1 });
+  } catch (error) {
+    messages = [];
+  }
   res.render('index', { title: 'Mini Message Board', messages: messages });
 });
 

@@ -8,9 +8,11 @@
   </head>
   <body>
     <h1><%= title %></h1>
+    <a href="/new">Add a Message!</a>
     <% for(let i = 0;i < messages.length;i++) {%>
     <div>
-      <%= messages[i].user %> <%= messages[i].text %> <%= messages[i].added %>
+      <%= messages[i].user %> <%= messages[i].text %> <%=
+      messages[i].added.toDateString() %>
     </div>
     <% } %>
   </body>
