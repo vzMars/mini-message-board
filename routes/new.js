@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   res.render('form', { title: 'Mini Message Board' });
 });
 
-router.put('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const { messageUser, messageText } = req.body;
   const message = new Message({
     text: messageText,
