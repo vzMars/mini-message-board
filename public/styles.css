@@ -107,6 +107,10 @@ form {
   gap: 2rem;
 }
 
+.btns form {
+  padding: 0;
+}
+
 .details {
   display: flex;
   flex-direction: column;
