@@ -4,7 +4,7 @@ This is a simple CRUD app that allows the user to create, update and delete mess
 
 **Link to project:** https://mini-message-board-vzmars.herokuapp.com/
 
-![alt text](https://i.imgur.com/8fyh4kF.png)
+![alt text](https://i.imgur.com/1eMqAm0.png)
 
 ## How It's Made:
 
