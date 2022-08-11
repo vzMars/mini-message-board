@@ -13,16 +13,21 @@
       <h1><%= title %></h1>
       <div class="inner-container">
         <%- include('./errorMessage.ejs') %>
-        <form method="POST" action="/new">
+        <form action="/update/<%= message._id%>?_method=PUT" method="POST">
           <label for="user"
             >User
-            <input type="text" name="messageUser" class="flex-start" />
+            <input
+              type="text"
+              name="messageUser"
+              class="flex-start"
+              value="<%= message.user %>"
+            />
           </label>
           <label for="message"
             >Message
-            <textarea name="messageText"></textarea>
+            <textarea name="messageText"><%= message.text %></textarea>
           </label>
-          <button class="btn flex-end" type="submit">Submit</button>
+          <button class="btn flex-end update-btn" type="submit">Update</button>
         </form>
       </div>
     </div>

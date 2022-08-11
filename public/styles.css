@@ -68,11 +68,13 @@ textarea {
   background-color: #ffffff;
   padding: 1rem;
   text-decoration: none;
+  text-align: center;
   color: #00652f;
   font-family: inherit;
   font-weight: 700;
   border-radius: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 .flex-start {
@@ -88,8 +90,25 @@ form {
   background-color: #1a9b56;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 3rem;
   border-radius: 1rem;
   padding: 2rem;
+}
+
+form {
+  flex-direction: column;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 2rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
